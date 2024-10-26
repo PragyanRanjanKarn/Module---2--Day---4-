@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="i1"></p>
+    <p id="i2"></p>
+    <p id="i3"></p>
+    <p id="i4"></p>
+    <p id="i5"></p>
+
+    <script>
+        var x = 10, y = 20;
+        var z = x + y;
+        var a = String(z);
+
+        document.getElementById("i1").innerHTML = z + " " + a;
+        document.getElementById("i2").innerHTML = typeof (z) + " " + typeof (a);
+        // addalert() It gives an error here and immediately program stops.
+
+        try {
+            var x = 3, y = 0;
+            var z = x / y;
+            addalert();
+        }
+
+        catch (err) {
+            document.getElementById("i3").innerHTML = err.message;
+        }
+
+        add = (a, b, c) => a + b + c; // It is as the summ() function given below
+
+        function sum(a, b, c) {
+            z = a + b + c;
+            return z;
+        }
+
+        document.getElementById("i4").innerHTML = add(3, 6, 9);
+        document.getElementById("i5").innerHTML = sum(3, 6, 9);
+    </script>
+</body>
+
+</html>
